@@ -10,7 +10,7 @@ public class PivotInSortedArray {
 		System.out.println(pivot(arr));
 	}
 
-	private static int pivot(int[] arr) {
+	public static int pivot(int[] arr) {
 		int start, end,mid;
 		start = 0;
 		end = arr.length - 1;
@@ -20,7 +20,7 @@ public class PivotInSortedArray {
 			mid = (start + end)/2;
 			if(mid < arr.length - 1 && arr[mid] > arr[mid+1])
 				return mid+1;
-			else if(arr[mid] > arr[start])
+			else if(arr[mid] >= arr[start])
 				start = mid + 1;
 			else
 				end = mid - 1;
