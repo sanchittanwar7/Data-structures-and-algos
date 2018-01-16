@@ -27,7 +27,7 @@ public class MergeSort {
 		return merge(first, second);
 	}
 
-	private static int[] merge(int[] first, int[] second) {
+	public static int[] merge(int[] first, int[] second) {
 		int i = 0, j = 0, k = 0;
 		int ans[] = new int[first.length + second.length];
 		while(i < first.length && j < second.length){
