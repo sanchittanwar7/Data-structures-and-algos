@@ -7,11 +7,10 @@ import java.util.Scanner;
 
 class BinaryTreeNode<T>{
 	T data;
-	ArrayList<BinaryTreeNode<T>> children;
-	
+	BinaryTreeNode<T> left;
+	BinaryTreeNode<T> right;
 	public BinaryTreeNode(T data){
 		this.data = data;
-		children = new ArrayList<BinaryTreeNode<T>>();
 	}
 }
 
@@ -24,21 +23,29 @@ public class BinaryTreeUse {
 		print(root);
 	}
 
-	private static void print(BinaryTreeNode<Integer> root) {
+	public static void print(BinaryTreeNode<Integer> root) {
 		Queue<BinaryTreeNode<Integer>> pendingNodes = new LinkedList<BinaryTreeNode<Integer>>();
 		pendingNodes.add(root);
 		while(!pendingNodes.isEmpty()){
 			BinaryTreeNode<Integer> currentNode = pendingNodes.remove();
 			System.out.print(currentNode.data +  " : ");
-			for(BinaryTreeNode<Integer> child : currentNode.children){
-				System.out.print(child.data + ", ");
-				pendingNodes.add(child);
+			if(currentNode.left != null){
+				System.out.print(currentNode.left.data);
+				pendingNodes.add(currentNode.left);
 			}
+			if(currentNode.right != null){
+				System.out.print(", " + currentNode.right.data);
+				pendingNodes.add(currentNode.right);
+			}
+//			for(BinaryTreeNode<Integer> child : currentNode.children){
+//				System.out.print(child.data + ", ");
+//				pendingNodes.add(child);
+//			}
 			System.out.println();
 		}		
 	}
 
-	private static BinaryTreeNode<Integer> takeInput() {
+	public static BinaryTreeNode<Integer> takeInput() {
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter root data : ");
 		int data = s.nextInt();
@@ -51,14 +58,14 @@ public class BinaryTreeUse {
 			data = s.nextInt();
 			if(data != -1){
 				BinaryTreeNode<Integer> child = new BinaryTreeNode<Integer>(data);
-				currentNode.children.add(child);
+				currentNode.left = child;
 				pendingNodes.add(child);
 			}
 			System.out.println("Enter right child of " + currentNode.data + " : ");
 			data = s.nextInt();
 			if(data != -1){
 				BinaryTreeNode<Integer> child = new BinaryTreeNode<Integer>(data);
-				currentNode.children.add(child);
+				currentNode.right = child;
 				pendingNodes.add(child);
 			}
 		}
