@@ -16,7 +16,7 @@ public class PrintTree {
 		print(root);
 	}
 
-	private static void print(BinaryTreeNode<Integer> root) {
+	public static void print(BinaryTreeNode<Integer> root) {
 		int spaceLeft, spaceRight, num = 0, count = 1;
 		int depth = depth(root);
 		spaceLeft = (int) (5*Math.pow(2, depth-3));
@@ -68,6 +68,7 @@ public class PrintTree {
 			for(i = 0; i < spaceRight; i++)
 				System.out.print(" ");
 		}
+		System.out.println();
 	}
 
 
