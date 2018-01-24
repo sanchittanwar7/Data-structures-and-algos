@@ -37,10 +37,6 @@ public class BinaryTreeUse {
 				System.out.print(", " + currentNode.right.data);
 				pendingNodes.add(currentNode.right);
 			}
-//			for(BinaryTreeNode<Integer> child : currentNode.children){
-//				System.out.print(child.data + ", ");
-//				pendingNodes.add(child);
-//			}
 			System.out.println();
 		}		
 	}
