@@ -24,7 +24,7 @@ public class TreeUse {
 		print(root);
 	}
 
-	private static void print(treeNode<Integer> root) {
+	public static void print(treeNode<Integer> root) {
 		Queue<treeNode<Integer>> pendingNodes = new LinkedList<treeNode<Integer>>();
 		pendingNodes.add(root);
 		while(!pendingNodes.isEmpty()){
@@ -38,7 +38,7 @@ public class TreeUse {
 		}
 	}
 
-	private static treeNode<Integer> takeInput() {
+	public static treeNode<Integer> takeInput() {
 		int data, n;
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter root data : ");

@@ -72,7 +72,7 @@ public class PrintTree {
 	}
 
 
-	private static int depth(BinaryTreeNode root) {
+	public static int depth(BinaryTreeNode root) {
 		if(root == null)
 			return 0;
 		int leftAns = depth(root.left);
