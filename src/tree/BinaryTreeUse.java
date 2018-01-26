@@ -7,10 +7,12 @@ import java.util.Scanner;
 
 class BinaryTreeNode<T>{
 	T data;
+	int height;
 	BinaryTreeNode<T> left;
 	BinaryTreeNode<T> right;
 	public BinaryTreeNode(T data){
 		this.data = data;
+		height = 1;
 	}
 }
 
