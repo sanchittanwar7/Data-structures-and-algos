@@ -16,7 +16,7 @@ public class DeletionInBST {
 		PrintTree.print(root);
 	}
 
-	private static BinaryTreeNode<Integer> deleteNode(BinaryTreeNode<Integer> root,BinaryTreeNode<Integer> node) {
+	public static BinaryTreeNode<Integer> deleteNode(BinaryTreeNode<Integer> root,BinaryTreeNode<Integer> node) {
 		if(root == null)
 			return null;
 		if(node.data < root.data){
@@ -46,7 +46,7 @@ public class DeletionInBST {
 		}
 	}
 
-	private static BinaryTreeNode<Integer> removeLeafNode(BinaryTreeNode<Integer> root,int node) {
+	public static BinaryTreeNode<Integer> removeLeafNode(BinaryTreeNode<Integer> root,int node) {
 		if(root == null)
 			return null;
 		if(root.data == node)
