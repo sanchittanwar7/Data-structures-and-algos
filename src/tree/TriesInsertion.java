@@ -8,6 +8,7 @@ class triesNode{
 	int value;
 	boolean isLeaf;
 	char charValue;
+	int numOfChilds;
 	ArrayList<triesNode> children;
 
 	triesNode(int value, char charValue, boolean isLeaf){
@@ -35,7 +36,7 @@ public class TriesInsertion {
 		System.out.println(search(root, "sanchit"));
 	}
 
-	private static int search(triesNode current, String string) {
+	public static int search(triesNode current, String string) {
 		if(string.length() == 1){
 			int pos = (int)string.charAt(0) - 96;
 			if(current.children.get(pos) != null && current.children.get(pos).isLeaf == true)
@@ -48,7 +49,7 @@ public class TriesInsertion {
 		return search(current.children.get(pos), string.substring(1));
 	}
 
-	private static void insert(triesNode current, String str, int i) {
+	public static void insert(triesNode current, String str, int i) {
 		if(str.length() == 1){
 			int pos = (int)str.charAt(0) - 96;
 			if(current.children.get(pos) != null){
@@ -57,12 +58,14 @@ public class TriesInsertion {
 			}
 			triesNode newNode = new triesNode(i, str.charAt(0), true);
 			current.children.set(pos, newNode);
+			current.numOfChilds += 1;
 			return;
 		}
 		int pos = (int)str.charAt(0) - 96;
 		if(current.children.get(pos) == null){
 			triesNode newNode = new triesNode(INVALID_NUM, str.charAt(0), false);
 			current.children.set(pos, newNode);
+			current.numOfChilds += 1;
 		}
 		current = current.children.get(pos);
 		insert(current, str.substring(1), i);
