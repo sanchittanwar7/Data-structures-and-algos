@@ -11,7 +11,7 @@ public class LongestCommonSubstring {
 		System.out.println(lcs(str1, str2));
 	}
 
-	private static String lcs(String str1, String str2) {
+	public static String lcs(String str1, String str2) {
 		int m = str1.length(), n = str2.length(), i, j, ans = -1, max = 0;
 		int arr[][] = new int[m+1][n+1];
 		for(i = 0; i <= m; i++){

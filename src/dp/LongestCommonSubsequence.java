@@ -13,7 +13,7 @@ public class LongestCommonSubsequence {
 		System.out.println(lcs(str1, str2));
 	}
 
-	private static String lcs(String str1, String str2) {
+	public static String lcs(String str1, String str2) {
 		int m = str1.length(), n = str2.length(), i, j = 0;
 		String str = "";
 		int arr[][] = new int[m + 1][n + 1];

@@ -6,8 +6,9 @@ public class LongestPalindromicSubstring {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String str = "forgeeksskeegfor";
+		String str_r = LongestPalindromicSubsequence.reverse(str);
+		System.out.println(LongestCommonSubstring.lcs(str, str_r));
 	}
 
 }
