@@ -5,6 +5,9 @@ public class MaxSumSubArray {
 	/**
 	 * @param args
 	 */
+	
+	//[-2,1,-3,4,-1,2,1,-5,4]
+	
 	public static void main(String[] args) {
 		int arr[] = CountFrequency.takeInput();
 		System.out.println(maxSum(arr));

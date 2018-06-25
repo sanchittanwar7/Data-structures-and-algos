@@ -12,8 +12,11 @@ public class CountFrequency3 {
 		int n = arr.length;
 		for(int i = 0; i < n; i++)
 			arr[i] -= 1;
+		System.out.println(Arrays.toString(arr));
 		for(int i = 0; i < n; i++)
 			arr[arr[i]%n] += n;
+		System.out.println(Arrays.toString(arr));
+
 		for(int i = 0; i < n; i++)
 			System.out.println(i+1 + " " + arr[i]/n);
 		for(int i = 0; i < n; i++)
