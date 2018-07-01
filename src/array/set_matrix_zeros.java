@@ -20,7 +20,7 @@ public class set_matrix_zeros {
 	private static void setZeros(ArrayList<ArrayList<Integer>> arr) {
 		HashMap<Integer, Boolean> row = new HashMap<Integer, Boolean>();
 		HashMap<Integer, Boolean> col = new HashMap<Integer, Boolean>();
-		int Row = arr.size(), Col = arr.get(0).size();
+		int Col = arr.get(0).size();
 		int  i, j;
 		for(i = 0; i < arr.size(); i++) {
 			for(j = 0; j < arr.get(i).size(); j++) {
