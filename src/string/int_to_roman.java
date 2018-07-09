@@ -17,7 +17,11 @@ public class int_to_roman {
 		int n3 = 1990;
 		int n4 = 2014;
 		int n5 = 2018;
-
+		
+		final StringBuffer str = new StringBuffer("abc");
+		str.append("ab");
+		System.out.println(str);
+		
 		System.out.println(intToRoman(n1));
 		System.out.println(intToRoman(n2));
 		System.out.println(intToRoman(n3));
