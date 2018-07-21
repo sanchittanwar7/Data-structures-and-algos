@@ -41,7 +41,7 @@ public class PalindromicPartitioning {
     }
 
 	public static void main(String args[]){
-       String str = "abcaba";
+       String str = "cbcaba";
        System.out.println("Min cuts needed for Palindrome Partitioning is "+ minPalPartion(str));
     }
 }
