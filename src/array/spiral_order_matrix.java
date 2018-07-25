@@ -6,7 +6,7 @@ import java.util.Collections;
 public class spiral_order_matrix {
 
 	public static void main(String[] args) {
-		int n = 4;
+		int n = 5;
 		ArrayList<ArrayList<Integer>> ans = generateMatrix(n);
 		System.out.println(ans);
 		for(ArrayList<Integer> row : ans) {
@@ -20,7 +20,7 @@ public class spiral_order_matrix {
 		for(i = 0; i < n; i++)
 			ans.add(new ArrayList<Integer>(Collections.nCopies(n, 0)));
 		int rightCol = n, bottomRow = n-1, leftCol = n-1, upRow = n-2;
-		int rightColStart = 0, bottomRowStart = n-1, leftColStart = n-1, upRowStart = 0;
+		int rightColStart = 0, bottomRowStart = n-1, upRowStart = 0;
 		int rowNumberUpper = 0, rowNumberLower = n-1, colNumber = 1;
 		int round = 0;
 		while(num <= n*n) {
@@ -49,7 +49,6 @@ public class spiral_order_matrix {
 			leftCol-=2;rowNumberLower--;
 			upRow-=2;upRowStart++;
 			round++;
-//			System.out.println(rowNumberLower + " " + rowNumberUpper);
 		}
 		return ans;
 	}
