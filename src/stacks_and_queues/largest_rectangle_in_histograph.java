@@ -14,11 +14,8 @@ public class largest_rectangle_in_histograph {
 	
 	public static int largestArea(ArrayList<Integer> arr) {
 		int area, left, right, maxArea = Integer.MIN_VALUE, len = arr.size();
-//		System.out.println(arr);
 		ArrayList<Integer> prevSmaller = prevSmaller(arr);
 		ArrayList<Integer> nextSmaller = nextSmaller(arr);
-//		System.out.println(prevSmaller);
-//		System.out.println(nextSmaller);
 		for(int i = 0; i < arr.size(); i++) {
 			left = prevSmaller.get(i);
 			right = nextSmaller.get(i) == -1 ? len : nextSmaller.get(i);
