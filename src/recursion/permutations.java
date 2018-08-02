@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class permutations {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> arr = new ArrayList<>();
+		ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1,2,2));
 		ArrayList<ArrayList<Integer>> ans = permute(arr);
 		for(ArrayList<Integer> row : ans)
 			System.out.println(row);

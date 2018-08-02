@@ -7,7 +7,7 @@ import java.util.Collections;
 public class subsets {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> arr = new ArrayList<>();
+		ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1,2,2));
 		Collections.sort(arr);
 		ArrayList<ArrayList<Integer>> ans = subsets(arr);
 		for(ArrayList<Integer> subset : ans)
@@ -15,8 +15,6 @@ public class subsets {
 	}
 
 	public static ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> arr) {
-//		if(arr.size() == 0)
-//            return new ArrayList<ArrayList<Integer>>();
 		if(arr.size() <= 1) {
 			ArrayList<ArrayList<Integer>> ans = new ArrayList<ArrayList<Integer>>();
 			ans.add(new ArrayList<Integer>());

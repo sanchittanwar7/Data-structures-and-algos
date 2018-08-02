@@ -28,9 +28,11 @@ public class gray_code {
 		String[] temp = helper(n-1);
 		String[] ans = new String[temp.length*2];
 		int i, index = 0;
+
 		for(i = 0; i < temp.length; i++, index++) {
 			ans[index] = "0" + temp[i];
-			index++;
+		}
+		for(i = temp.length - 1; i >= 0 ; i--, index++) {
 			ans[index] = "1" + temp[i];
 		}
 		return ans;
