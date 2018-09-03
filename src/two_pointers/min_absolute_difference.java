@@ -21,6 +21,7 @@ public class min_absolute_difference {
 			z = a3.get(k);
 			diff = Math.abs(Math.max(x,Math.max(y,z)) - Math.min(x,Math.min(y,z)));
 			if(diff < minDiff) {
+				System.out.println(x + " " +y+ " " + z);
 				minDiff = diff;
 			}
 			if(x <= y && x <= z)
